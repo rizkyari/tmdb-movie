@@ -12,7 +12,7 @@
             :key="it.id" 
             :movie="it" 
             :in-watchlist="wl.hasById(it.id, 'movie')"
-            @toggle="toggle({id: it.id, type: 'movie'})"
+            @toggle="toggle({...it, type: 'movie'})"
             />
         </div>
 

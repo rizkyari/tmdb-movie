@@ -27,7 +27,7 @@
           :key="m.id"
           :movie="m"
           :inWatchlist="wl.hasById(m.id,'movie')"
-          @toggle="toggle({id:m.id, type:'movie'})"
+          @toggle="toggle({...m, type: 'movie'})"
         />
       </div>
     </section>
