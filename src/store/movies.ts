@@ -10,5 +10,25 @@ export const useMovieStore = defineStore("movies", () => {
     const loading = ref(false);
     const error = ref<string | null>(null);
 
-    return {items, page, totalPages, loading, error}
+    async function fetchPopular(p=1) {
+        if (p < 1) p = 1;
+        if (totalPages.value && p > totalPages.value) p = totalPages.value;
+
+        loading.value = true;
+        error.value = null;
+
+        page.value = p;
+        try {
+            const res = await getPopularMovies(p);
+            const data: PagedResponse<Movie> = res.data;
+            items.value = data.results;
+            totalPages.value = data.total_pages;
+        } catch (e: any) {
+            error.value = e?.message ?? "Failed to fetch";
+        } finally {
+            loading.value = false;
+        }
+    }
+
+    return {items, page, totalPages, loading, error, fetchPopular}
 })
