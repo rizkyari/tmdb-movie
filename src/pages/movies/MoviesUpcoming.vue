@@ -1,5 +1,5 @@
 <template>
     <div>
-        This will be Detail
+        This is for Upcoming movies
     </div>
 </template>

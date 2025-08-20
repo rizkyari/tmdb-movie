@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import Header from './components/layouts/Header.vue';
 import Footer from './components/layouts/Footer.vue';
+import { useWatchlistStore } from './store/watchlist';
+import { onMounted } from 'vue';
+
+const wl = useWatchlistStore();
+onMounted(() => wl.load());
 </script>
 
 <template>
