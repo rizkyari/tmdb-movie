@@ -20,7 +20,7 @@
             <li><a href="/" class="hover:text-white transition">Home</a></li>
             <li><a href="/movies" class="hover:text-white transition">Movies</a></li>
             <li><a href="/tv/popular" class="hover:text-white transition">TV Series</a></li>
-            <li><a href="/watchlist" class="hover:text-white transition">Watclist</a></li>
+            <li><a href="/watchlist" class="hover:text-white transition">Watchlist</a></li>
           </ul>
         </div>
 
@@ -57,6 +57,5 @@
   </footer>
 </template>
 
-<script setup>
-// kalau mau make icon bebas, misal fontawesome atau lucide-react
+<script setup lang="ts">
 </script>
