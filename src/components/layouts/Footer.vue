@@ -58,5 +58,4 @@
 </template>
 
 <script setup>
-// kalau mau make icon bebas, misal fontawesome atau lucide-react
 </script>
