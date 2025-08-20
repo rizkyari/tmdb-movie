@@ -1,5 +1,5 @@
 <template>
     <div>
-        This will be Detail
+        This will be a footer
     </div>
 </template>
