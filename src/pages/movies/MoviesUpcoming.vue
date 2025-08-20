@@ -3,7 +3,7 @@
         <h1 class="text-2xl font-bold mb-4">Upcoming Movies</h1>
 
         <div v-if="m.loading" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-            <div v-for="n in 10" :key="n" class="h-[260px] bg-neutral-800 animate-pulse rounded-xl"></div>
+            <div v-for="n in 10" :key="n" class="h-[260px] md:w-36 bg-neutral-800 animate-pulse rounded-xl"></div>
         </div>
 
         <div v-else class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">

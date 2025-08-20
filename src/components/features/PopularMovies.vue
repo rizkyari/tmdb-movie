@@ -3,11 +3,17 @@
         <h1 class="text-2xl font-bold mb-4">Popular Movies</h1>
 
         <div v-if="m.loading" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-            <div v-for="n in 10" :key="n" class="h-[260px] bg-neutral-800 animate-pulse rounded-xl"></div>
+            <div v-for="n in 10" :key="n" class="h-[260px] md:w-36 bg-neutral-800 animate-pulse rounded-xl"></div>
         </div>
 
         <div v-else class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-            <MovieCard v-for="it in m.items" :key="it.id" :movie="it" />
+            <MovieCard 
+            v-for="it in m.items" 
+            :key="it.id" 
+            :movie="it" 
+            :in-watchlist="wl.hasById(it.id, 'movie')"
+            @toggle="toggle({id: it.id, type: 'movie'})"
+            />
         </div>
 
         <p v-if="m.error" class="text-red-400 mt-3">{{ m.error }}</p>
@@ -22,8 +28,12 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import { useMovieStore } from '../../store/movies';
+import { useWatchlistStore } from '../../store/watchlist';
 
 import MovieCard from '../commons/MovieCard.vue';
+
+const wl = useWatchlistStore();
+const toggle = wl.toggle;
 
 const m = useMovieStore();
 onMounted(() => m.fetchPopular(1))
