@@ -18,7 +18,7 @@
       </div>
 
       <div v-if="loading" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-        <div v-for="n in 5" :key="n" class="h-[260px] bg-neutral-800 animate-pulse rounded-xl"></div>
+        <div v-for="n in 5" :key="n" class="h-[260px] md:w-36 bg-neutral-800 animate-pulse rounded-xl"></div>
       </div>
 
       <div v-else class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
@@ -27,7 +27,7 @@
           :key="m.id"
           :movie="m"
           :inWatchlist="wl.hasById(m.id,'movie')"
-          @toggle="toggle({id:m.id, type:'movie'})"
+          @toggle="toggle({...m, type: 'movie'})"
         />
       </div>
     </section>

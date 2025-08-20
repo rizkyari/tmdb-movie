@@ -17,12 +17,12 @@
             </p>
 
             <div class="flex items-center gap-1 text-yellow-400 text-xs">
-                star <span> {{ movie.vote_average.toFixed(1) }} </span>
+                <i class="fas fa-star"></i> <span> {{ movie.vote_average.toFixed(1) }} </span>
             </div>
 
             <button
             class="mt-2 w-full border rounded-lg px-2 py-1 text-xs hover:bg-neutral-600 hover:text-amber-100 cursor-pointer"
-            @click="$emit('toggle')"
+            @click="$emit('toggle', movie)"
             :aria-pressed="inWatchlist"
             aria-label="Add to watchlist"
             >
