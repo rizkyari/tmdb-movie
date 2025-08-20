@@ -9,7 +9,7 @@
             <ul class="hidden md:flex items-center gap-4 text-sm">
                 <li class="relative group">
                     <button class="px-3 py-1 rounded hover:bg-neutral-800">Movies ▾</button>
-                    <div class="absolute hidden group-hover:block bg-neutral-900 border border-neutral-800 rounded-lg mt-1 min-w-48">
+                    <div class="absolute left-0 top-full min-w-48 bg-neutral-900 border border-neutral-800 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition duration-150">
                         <RouterLink :to="{name:'movies-popular'}" class="block px-3 py-2 hover:bg-neutral-800">Popular</RouterLink>
                         <RouterLink :to="{name:'movies-upcoming'}" class="block px-3 py-2 hover:bg-neutral-800">Upcoming</RouterLink>
                     </div>
@@ -17,7 +17,7 @@
 
                 <li class="relative group">
                     <button class="px-3 py-1 rounded hover:bg-neutral-800">TV Series ▾</button>
-                    <div class="absolute hidden group-hover:block bg-neutral-900 border border-neutral-800 rounded-lg mt-1 min-w-48">
+                    <div class="absolute left-0 top-full min-w-48 bg-neutral-900 border border-neutral-800 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition duration-150">
                         <RouterLink :to="{name:'tv-popular'}" class="block px-3 py-2 hover:bg-neutral-800">Popular</RouterLink>
                         <RouterLink :to="{name:'tv-top-rated'}" class="block px-3 py-2 hover:bg-neutral-800">Top Rated</RouterLink>
                     </div>
