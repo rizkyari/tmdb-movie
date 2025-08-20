@@ -36,7 +36,7 @@
             aria-controls="mobile-menu"
             @click="toggle()"
             >
-                <span v-if="!open">Open</span>
+                <span v-if="!open"><i class="fas fa-bars"></i></span>
                 <span v-else>✕</span>
             </button>
         </nav>

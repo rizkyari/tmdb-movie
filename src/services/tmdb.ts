@@ -16,3 +16,11 @@ export const searchMulti = (query: string, page = 1) =>
     api.get("/search/multi", {
         params: {query, page}
     })
+
+export const searchMovie = (query: string, page=1) =>
+    api.get("/search/movie",{
+        params: {query,page}
+    })
+
+export const searchTv = (query: string, page = 1) =>
+  api.get("/search/tv", { params: { query, page } });
