@@ -17,7 +17,7 @@
             </p>
 
             <div class="flex items-center gap-1 text-yellow-400 text-xs">
-                star <span> {{ tv.vote_average.toFixed(1) }} </span>
+                <i class="fas fa-star"></i> <span> {{ tv.vote_average.toFixed(1) }} </span>
             </div>
 
             <button
